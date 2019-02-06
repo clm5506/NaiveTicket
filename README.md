@@ -219,3 +219,71 @@ Exercise 2.32 Can you complete the following method, whose purpose is to sub- tr
   price = price - amount;
 ... }
 
+Exercise 2.33 Add a method called prompt to the TicketMachine class. This should have a void return type and take no parameters. The body of the method should print something like:
+  Please insert the correct amount of money.
+  
+    public void prompt() {
+    System.out.println("Please input the correct amount of money");
+    }
+    
+Exercise 2.34 Add a showPrice method to the TicketMachine class. This should have a void return type and take no parameters. The body of the method should print something like:
+The price of a ticket is xyz cents.
+where xyz should be replaced by the value held in the price field when the method
+is called.
+
+    public void showPrice() {
+     System.out.println("The price of a ticket is " + price + " cents");   
+    }
+    
+Exercise 2.35 Create two ticket machines with differently priced tickets. Do calls to their showPrice methods show the same output, or different? How do you explain this effect?
+	The out put is different because we defined different prices when constructing our objects.
+	
+Exercise 2.36 What do you think would be printed if you altered the fourth state- ment of printTicket so that price also has quotes around it, as follows?
+  System.out.println("# " + "price" + " cents.");
+  	It would concatenate the 3 strings in the output instead of printing the value of price.
+		
+Exercise 2.37 What about the following version? System.out.println("# price cents.");
+	It would print # price cents. all on one line\\Exercise 2.38 Could either of the previous two versions be used to show the price of tickets in different ticket machines? Explain your answer.
+	No because we aren't using the variable price in the output we're just printing the word price.
+
+Exercise 2.39 Modify the constructor of TicketMachine so that it no longer has a parameter. Instead, the price of tickets should be fixed at 1000 cents. What effect does this have when you construct ticket machine objects within BlueJ?
+
+    public TicketMachine()
+    {
+        price = 1000;
+        balance = 0;
+        total = 0;
+    }
+    
+    You are no longer prompted to provide the price of tickets within BlueJ when creating a new instance of TicketMachine.
+    
+ Exercise 2.40 Implement a method, empty, that simulates the effect of removing all money from the machine. This method should have a void return type, and its body should simply set the total field to zero. Does this method need to take any parameters? Test your method by creating a machine, inserting some money, printing some tickets, checking the total, and then emptying the machine. Is this method a mutator or an accessor?
+ 
+     public void empty() {
+        total = 0;
+    }
+    
+    No it doesn't need to take any parameters because you want the value to be 0 not a value that is passed in. It is a mutator method.
+    
+    Exercise 2.41 Implement a method, setPrice, that is able to set the price of tickets to a new value. The new price is passed in as a parameter value to the method. Test your method by creating a machine, showing the price of tickets, changing the price, and then showing the new price. Is this method a mutator?
+    
+        public void setPrice(int ticketCost){
+		this.price = ticketCost;
+    }
+    This is a mutator method
+    
+Exercise 2.42 Give the class two constructors. One should take a single parame- ter that specifies the price, and the other should take no parameter and set the price to be a default value of your choosing. Test your implementation by creating machines via the two different constructors.
+
+    public TicketMachine()
+    {
+        price = 1000;
+        balance = 0;
+        total = 0;
+    }
+    
+    public TicketMachine(int priceSentInMethodCall) {
+        this.price = priceSentInMethodCall;
+    }
+    
+    
+    
