@@ -19,6 +19,7 @@ Work through all these exercises. You edit this file with your answers for these
 	CM - getBalance returns 20
 	* You can insert several separate amounts of money into the machine, just like you might insert multiple coins or notes into a real machine. Try inserting the exact amount required for a ticket. As this is a simple machine, a ticket will not be issued automatically, so once you have inserted enough money, call the `printTicket` method. A facsimile ticket should be printed in the BlueJ terminal window.
 	CM -Called printTicket() and the below output was returned:
+	
 ##################
 # The BlueJ Line
 # Ticket
@@ -81,28 +82,39 @@ in the outer wrapper of a class?
 
 ### Exercise 2.9
 * From your earlier experimentation with the ticket machine objects within BlueJ you can probably remember the names of some of the methods – `printTicket`, for instance.
-	* Look at the class definition in Code 2.1 and use this knowledge, along with the additional information about ordering we have given you, to try to make a list of the names of the fields, constructors, and methods in the `TicketMachine` class.
+	* Look at the class definition in Code 2.1 and use this knowledge, along with the additional information about ordering we have given you, to try to make a list of the names of the fields, constructors, and methods in the `TicketMachine` class. CM - Fields: price, balance, total
+	  - Constructor:
+	
+	public TicketMachine(int ticketCost)
+   	 {
+        price = ticketCost;
+        balance = 0;
+        total = 0;
+   	 }
+    	Methods: getPrice(), getBalance(), insertMoney(), printTicket(), 
+	 
 	* Hint: There is only one constructor in the class.
 
 ### Exercise 2.10
 * Do you notice any features of the constructor that make it significantly different from the other methods of the class?
+	CM - First letter of the contructor is capitalized and doesn't specify whether or not something should be returned by 	      the method
 
 ### Exercise 2.11
 * What do you think is the type of each of the following fields?
 
 ```java
-private int count;
-private Student representative;
-private Server host;
+private int count; CM - the type is int
+private Student representative; CM - the type is Student
+private Server host; CM - the type is Server
 ```
 
 ### Exercise 2.12
 * What are the names of the following fields?
 
 ```java
-private boolean alive;
-private Person tutor;
-private Game game;
+private boolean alive; CM - the name is alive
+private Person tutor; CM - the name is tutor
+private Game game; CM - the name is game
 ```
 ### Exercise 2.13
 
@@ -111,24 +123,24 @@ In the following field declaration from the TicketMachine class<br>
 ```java
 private int price;
 ```
-does it matter which order the three words appear in?
+does it matter which order the three words appear in? CM - YES
 * Edit the `TicketMachine` class to try different orderings. After each change, close the editor.
 	* Does the appearance of the class diagram after each change give you a clue as to whether or not other orderings are
-possible?
-	* Check by pressing the compile button to see if there is an error message.
+possible? CM - Yes 
+	* Check by pressing the compile button to see if there is an error message. CM - <identifier> expected, illegal start of type error is received
 	* Make sure that you reinstantiate the original version after your experiments!
 
 ### Exercise 2.14
-* Is it always necessary to have a semicolon at the end of a field declaration?
+* Is it always necessary to have a semicolon at the end of a field declaration? CM - YES, '; expected' error 
 * Once again, experiment via the editor.
 * The rule you will learn here is an important one, so be sure to remember it.
 
 
 ### Exercise 2.15
-* Write in full the declaration for a field of type `int` whose name is `status`.
+* Write in full the declaration for a field of type `int` whose name is `status`. CM - declared private int status; in editor
 
 ### Exercise 2.16
-* To what class does the following constructor belong?
+* To what class does the following constructor belong? CM - Student
 ```
 public Student(String name)
 ```
