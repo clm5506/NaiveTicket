@@ -157,3 +157,65 @@ public Book(String title, double price) CM - 2 parameters of types String and do
 
 Work all Exercises from 2.19 to 2.58 that are **NOT** marked *Challenge exercise*.
 READ upto and INCLUDING section 2.15 of this chapter.
+
+Exercise 2.19
+public Pet(String petsName) {
+	String myPetsName = petsName;
+}
+
+Exercise 2.21 Compare the getBalance method with the getPrice method. What are the differences between them?
+	      They return different values
+Exercise 2.22 If a call to getPrice can be characterized as ‘What do tickets cost?’, how would you characterize a call to getBalance? 
+	      The amount of money already inserted for the next ticket
+	      
+Exercise 2.23 If the name of getBalance is changed to getAmount, does the return statement in the body of the method need to be changed, too? Try it out within BlueJ.
+		NO it doesn't need to be changed, but it should be to be clear to people reading the code
+		
+Exercise 2.24 Define an accessor method, getTotal, that returns the value of the total field.
+		    public int getTotal()
+    {
+        return total;
+    }
+    
+Exercise 2.25 Try removing the return statement from the body of getPrice. What error message do you see now when you try compiling the class?
+	Error states "missing return type"
+	
+Exercise 2.26 Compare the method signatures of getPrice and printTicket in Code 2.1. Apart from their names, what is the main difference between them?
+	getPrice expects a int return value and printTicket doesn't return anything;
+	
+Exercise 2.27 Do the insertMoney and printTicket methods have return statements? Why do you think this might be? Do you notice anything about their headers that might suggest why they do not require return statements?
+	No they do not return anything because they are not called to retrieve data from the class like accessor methods. They are mutator methods. They change state. They both have void in their method signatures.
+	
+Exercise 2.28 Create a ticket machine with a ticket price of your choosing. Before doing anything else, call the getBalance method on it. Now call the insertMoney method (Code 2.6) and give a non-zero positive amount of money as the actual parameter. Now call getBalance again. The two calls to getBalance should show different output because the call to insertMoney had the effect of changing the machine’s state via its balance field. 
+	Balance started out at zero that increased to the amount I sent when I called the insertMoney method.
+
+Exercise 2.29 How can we tell from just its header that setPrice is a method and not a constructor?
+public void setPrice(int ticketCost)
+	The method specifies void return type, setPrice is lower case.
+		
+Exercise 2.30 Complete the body of the setPrice method so that it assigns the
+value of its parameter to the price field.
+
+	public void setPrice(int ticketCost){
+		this.price = ticketCost;
+	}
+
+Exercise 2.31 Complete the body of the following method, whose purpose is to
+add the value of its parameter to a field named score.
+  /**
+   * Increase score by the given number of points.
+   */
+  public void increase(int points)
+  {
+  	score = score + points;
+... }
+
+Exercise 2.32 Can you complete the following method, whose purpose is to sub- tract the value of its parameter from a field named price?
+  /**
+   * Reduce price by the given amount.
+   */
+  public void discount(int amount)
+  {
+  price = price - amount;
+... }
+
