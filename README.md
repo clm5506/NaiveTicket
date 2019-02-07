@@ -158,49 +158,49 @@ public Book(String title, double price) CM - 2 parameters of types String and do
 Work all Exercises from 2.19 to 2.58 that are **NOT** marked *Challenge exercise*.
 READ upto and INCLUDING section 2.15 of this chapter.
 
-Exercise 2.19
+### Exercise 2.19
 public Pet(String petsName) {
 	String myPetsName = petsName;
 }
 
-Exercise 2.21 Compare the getBalance method with the getPrice method. What are the differences between them?
+### Exercise 2.21 Compare the getBalance method with the getPrice method. What are the differences between them?
 	      They return different values
-Exercise 2.22 If a call to getPrice can be characterized as ‘What do tickets cost?’, how would you characterize a call to getBalance? 
+### Exercise 2.22 If a call to getPrice can be characterized as ‘What do tickets cost?’, how would you characterize a call to getBalance? 
 	      The amount of money already inserted for the next ticket
 	      
-Exercise 2.23 If the name of getBalance is changed to getAmount, does the return statement in the body of the method need to be changed, too? Try it out within BlueJ.
+### Exercise 2.23 If the name of getBalance is changed to getAmount, does the return statement in the body of the method need to be changed, too? Try it out within BlueJ.
 		NO it doesn't need to be changed, but it should be to be clear to people reading the code
 		
-Exercise 2.24 Define an accessor method, getTotal, that returns the value of the total field.
+### Exercise 2.24 Define an accessor method, getTotal, that returns the value of the total field.
 		    public int getTotal()
     {
         return total;
     }
     
-Exercise 2.25 Try removing the return statement from the body of getPrice. What error message do you see now when you try compiling the class?
+### Exercise 2.25 Try removing the return statement from the body of getPrice. What error message do you see now when you try compiling the class?
 	Error states "missing return type"
 	
-Exercise 2.26 Compare the method signatures of getPrice and printTicket in Code 2.1. Apart from their names, what is the main difference between them?
+### Exercise 2.26 Compare the method signatures of getPrice and printTicket in Code 2.1. Apart from their names, what is the main difference between them?
 	getPrice expects a int return value and printTicket doesn't return anything;
 	
-Exercise 2.27 Do the insertMoney and printTicket methods have return statements? Why do you think this might be? Do you notice anything about their headers that might suggest why they do not require return statements?
+### Exercise 2.27 Do the insertMoney and printTicket methods have return statements? Why do you think this might be? Do you notice anything about their headers that might suggest why they do not require return statements?
 	No they do not return anything because they are not called to retrieve data from the class like accessor methods. They are mutator methods. They change state. They both have void in their method signatures.
 	
-Exercise 2.28 Create a ticket machine with a ticket price of your choosing. Before doing anything else, call the getBalance method on it. Now call the insertMoney method (Code 2.6) and give a non-zero positive amount of money as the actual parameter. Now call getBalance again. The two calls to getBalance should show different output because the call to insertMoney had the effect of changing the machine’s state via its balance field. 
+### Exercise 2.28 Create a ticket machine with a ticket price of your choosing. Before doing anything else, call the getBalance method on it. Now call the insertMoney method (Code 2.6) and give a non-zero positive amount of money as the actual parameter. Now call getBalance again. The two calls to getBalance should show different output because the call to insertMoney had the effect of changing the machine’s state via its balance field. 
 	Balance started out at zero that increased to the amount I sent when I called the insertMoney method.
 
-Exercise 2.29 How can we tell from just its header that setPrice is a method and not a constructor?
+### Exercise 2.29 How can we tell from just its header that setPrice is a method and not a constructor?
 public void setPrice(int ticketCost)
 	The method specifies void return type, setPrice is lower case.
 		
-Exercise 2.30 Complete the body of the setPrice method so that it assigns the
+### Exercise 2.30 Complete the body of the setPrice method so that it assigns the
 value of its parameter to the price field.
 
 	public void setPrice(int ticketCost){
 		this.price = ticketCost;
 	}
 
-Exercise 2.31 Complete the body of the following method, whose purpose is to
+### Exercise 2.31 Complete the body of the following method, whose purpose is to
 add the value of its parameter to a field named score.
   /**
    * Increase score by the given number of points.
@@ -210,7 +210,7 @@ add the value of its parameter to a field named score.
   	score = score + points;
 ... }
 
-Exercise 2.32 Can you complete the following method, whose purpose is to sub- tract the value of its parameter from a field named price?
+### Exercise 2.32 Can you complete the following method, whose purpose is to sub- tract the value of its parameter from a field named price?
   /**
    * Reduce price by the given amount.
    */
@@ -219,14 +219,14 @@ Exercise 2.32 Can you complete the following method, whose purpose is to sub- tr
   price = price - amount;
 ... }
 
-Exercise 2.33 Add a method called prompt to the TicketMachine class. This should have a void return type and take no parameters. The body of the method should print something like:
+### Exercise 2.33 Add a method called prompt to the TicketMachine class. This should have a void return type and take no parameters. The body of the method should print something like:
   Please insert the correct amount of money.
   
     public void prompt() {
     System.out.println("Please input the correct amount of money");
     }
     
-Exercise 2.34 Add a showPrice method to the TicketMachine class. This should have a void return type and take no parameters. The body of the method should print something like:
+### Exercise 2.34 Add a showPrice method to the TicketMachine class. This should have a void return type and take no parameters. The body of the method should print something like:
 The price of a ticket is xyz cents.
 where xyz should be replaced by the value held in the price field when the method
 is called.
@@ -235,18 +235,18 @@ is called.
      System.out.println("The price of a ticket is " + price + " cents");   
     }
     
-Exercise 2.35 Create two ticket machines with differently priced tickets. Do calls to their showPrice methods show the same output, or different? How do you explain this effect?
+### Exercise 2.35 Create two ticket machines with differently priced tickets. Do calls to their showPrice methods show the same output, or different? How do you explain this effect?
 	The out put is different because we defined different prices when constructing our objects.
 	
-Exercise 2.36 What do you think would be printed if you altered the fourth state- ment of printTicket so that price also has quotes around it, as follows?
+### Exercise 2.36 What do you think would be printed if you altered the fourth state- ment of printTicket so that price also has quotes around it, as follows?
   System.out.println("# " + "price" + " cents.");
   	It would concatenate the 3 strings in the output instead of printing the value of price.
 		
-Exercise 2.37 What about the following version? System.out.println("# price cents.");
+### Exercise 2.37 What about the following version? System.out.println("# price cents.");
 	It would print # price cents. all on one line\\Exercise 2.38 Could either of the previous two versions be used to show the price of tickets in different ticket machines? Explain your answer.
 	No because we aren't using the variable price in the output we're just printing the word price.
 
-Exercise 2.39 Modify the constructor of TicketMachine so that it no longer has a parameter. Instead, the price of tickets should be fixed at 1000 cents. What effect does this have when you construct ticket machine objects within BlueJ?
+### Exercise 2.39 Modify the constructor of TicketMachine so that it no longer has a parameter. Instead, the price of tickets should be fixed at 1000 cents. What effect does this have when you construct ticket machine objects within BlueJ?
 
     public TicketMachine()
     {
@@ -257,7 +257,7 @@ Exercise 2.39 Modify the constructor of TicketMachine so that it no longer has a
     
     You are no longer prompted to provide the price of tickets within BlueJ when creating a new instance of TicketMachine.
     
- Exercise 2.40 Implement a method, empty, that simulates the effect of removing all money from the machine. This method should have a void return type, and its body should simply set the total field to zero. Does this method need to take any parameters? Test your method by creating a machine, inserting some money, printing some tickets, checking the total, and then emptying the machine. Is this method a mutator or an accessor?
+### Exercise 2.40 Implement a method, empty, that simulates the effect of removing all money from the machine. This method should have a void return type, and its body should simply set the total field to zero. Does this method need to take any parameters? Test your method by creating a machine, inserting some money, printing some tickets, checking the total, and then emptying the machine. Is this method a mutator or an accessor?
  
      public void empty() {
         total = 0;
@@ -265,14 +265,14 @@ Exercise 2.39 Modify the constructor of TicketMachine so that it no longer has a
     
     No it doesn't need to take any parameters because you want the value to be 0 not a value that is passed in. It is a mutator method.
     
-    Exercise 2.41 Implement a method, setPrice, that is able to set the price of tickets to a new value. The new price is passed in as a parameter value to the method. Test your method by creating a machine, showing the price of tickets, changing the price, and then showing the new price. Is this method a mutator?
+### Exercise 2.41 Implement a method, setPrice, that is able to set the price of tickets to a new value. The new price is passed in as a parameter value to the method. Test your method by creating a machine, showing the price of tickets, changing the price, and then showing the new price. Is this method a mutator?
     
         public void setPrice(int ticketCost){
 		this.price = ticketCost;
     }
     This is a mutator method
     
-Exercise 2.42 Give the class two constructors. One should take a single parame- ter that specifies the price, and the other should take no parameter and set the price to be a default value of your choosing. Test your implementation by creating machines via the two different constructors.
+### Exercise 2.42 Give the class two constructors. One should take a single parame- ter that specifies the price, and the other should take no parameter and set the price to be a default value of your choosing. Test your implementation by creating machines via the two different constructors.
 
     public TicketMachine()
     {
@@ -285,5 +285,118 @@ Exercise 2.42 Give the class two constructors. One should take a single parame- 
         this.price = priceSentInMethodCall;
     }
     
+### Exercise 2.43 Check that the behavior we have discussed here is accurate by creating a TicketMachine instance and calling insertMoney with various actual parameter values. Check the balance both before and after calling insertMoney. Does the balance ever change in the cases when an error message is printed? Try to predict what will happen if you enter the value zero as the parameter, and then see if you are right.
     
+	If I insert zero dollars, then I receive the error prompting me to use a positive number. The balance is not updated when calling insertMoney with a value < 0.
+	
+### Exercise 2.44 Predict what you think will happen if you change the test in insertMoney to use the greater-than or equal-to operator:
+  if(amount >= 0)
+Check your predictions by running some tests. What difference does it make to the behavior of the method?
+
+	I predict that change the = to >= will allow the insertMoney method to be called with 0 as the amount and no error will be displayed to the user.
+	
+	The results match my prediction
+	
+### Exercise 2.45 In the shapes project we looked at in Chapter 1 we used a boolean field to control a feature of the circle objects. What was that feature? Was it well suited to being controlled by a type with only two different values?
+
+	The boolean field was isVisible. Boolean was acceptable because there are only 2 options: visible and invisible.
+	
+
+### Exercise 2.46 In this version of printTicket we also do something slightly different with the total and balance fields. Compare the implementation of the method in Code 2.1 with that in Code 2.8 to see whether you can tell what those differences are. Then check your understanding by experimenting within BlueJ.
+
+
+	2.1 code sets balance to 0 after printTicket is called and balance is added to total.
+	2.8 code sets balance = to balance - price and price, instead of balance, is added to total.
+	
+Exercise 2.47 After a ticket has been printed, could the value in the balance field ever be set to a negative value by subtracting price from it? Justify your answer.
+	
+	No, because balance has to be > or = to price before entering the loop that reduces balance by price.
+	
+### Exercise 2.48 Sofarwehaveintroducedyoutotwoarithmeticoperators,+and–, that can be used in arithmetic expressions in Java. Take a look at Appendix D to find out what other operators are available.
+
+### Exercise 2.49 Write an assignment statement that will store the result of multiply- ing two variables, price and discount, into a third variable, saving.
+
+	int saving = price * discount;
+
+Exercise 2.50 Write an assignment statement that will divide the value in total by the value in count and store the result in mean. 
+
+	int mean = total / count;
+
+
+### Exercise 2.51 Write an if statement that will compare the value in price against the value in budget. If price is greater than budget then print the message ‘Too expensive’, otherwise print the message ‘Just right’.
+	
+	if( price > budget) {
+		System.out.println("Too expensive");
+	} else {
+		System.out.println("Just right");
+	}
+
+### Exercise 2.52 Modify your answer to the previous exercise so that the message if the price is too high includes the value of your budget.
+
+	if( price > budget) {
+		System.out.println( price + "is Too expensive");
+	} else {
+		System.out.println("Just right");
+	}
+	
+### Exercise 2.53 Why does the following version of refundBalance not give the same results as the original?
+  public int refundBalance()
+  {
+balance = 0;
+      return balance;
+  }
+  
+  The original refundBalance returns amountToRefund.
+  
+What tests can you run to demonstrate that it does not? Test what balance value is returned when balance is greater than price.
+
+### Exercise 2.54 What happens if you try to compile the Ticket Machine class with the following version of refundBalance?
+  public int refundBalance()
+  {
+      return balance;
+balance = 0; }
+
+You will get an error
+
+What do you know about return statements that helps to explain why this version does not compile?
+
+Return statement needs to be the last line in the method bc it will be the last to be executed and so any line of code beneath the return statement will be considered unreachable.
+
+### Exercise 2.55 Add a new method, emptyMachine, that is designed to simulate emptying the machine of money. It should both return the value in total and reset total to be zero.
+
+    public int emptyMachine() {
+        total = 0;
+        return total;
+    }
     
+### Exercise 2.56 Is emptyMachine an accessor, a mutator, or both?
+ 
+ 	emptyMachine is a mutator method because change the state of a variable.
+	
+### Exercise 2.57 Rewrite the printTicket method so that it declares a local variable, amountLeftToPay. This should then be initialized to contain the difference between price and balance. Rewrite the test in the conditional statement to check the value of amountLeftToPay. If its value is less than or equal to zero, a ticket should be printed, otherwise an error message should be printed stating the amount still required. Test your version to ensure that it behaves in exactly the same way as the original version.
+
+    public void printTicket()
+    {
+        
+        int amountLeftToPay = price - balance;
+        
+        if(amountLeftToPay <= 0) {
+            // Simulate the printing of a ticket.
+            System.out.println("##################");
+            System.out.println("# The BlueJ Line");
+            System.out.println("# Ticket");
+            System.out.println("# " + price + " cents.");
+            System.out.println("##################");
+            System.out.println();
+
+            // Update the total collected with the price.
+            total = total + price;
+            // Reduce the balance by the prince.
+            balance = balance - price;
+        }
+        else {
+            System.out.println("You must insert at least: " +
+                               (price - balance) + " more cents.");
+                    
+        }
+    }
